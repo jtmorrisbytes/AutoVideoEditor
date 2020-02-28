@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="api/video" enctype="multipart/form-data">
+    <input type="file" accept="video/*" name="upload-file"/> <br />
+    <input id='enable-jumpcut'type='checkbox' name='enableJumpcut'/>
+    <label for='enable-jumpcut'>Jumpcut Video?</label>
+    <div id='jumpcut-options-container'>
+        <input id='silent-speed' class="silent-speed" name='silentSpeed' type="number" min="1" max="9999" required />
+        <label for="silent-speed">Silent Speed</label>
+        <br />
+        <input id='sounded-speed' class="silent-speed" name='SoundedSpeed' type="number" min="1" max="9999" required />
+        <label for="sounded-speed">Sounded Speed</label>
+        <br />
+        <input type="number" id="frame-rate" name="frameRate" min="1" max="999" required="required" />
+    </div>
+    <button type="submit">upload video</button>
+    </form>
+</body>
+</html>
