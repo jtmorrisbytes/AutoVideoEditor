@@ -14,10 +14,12 @@
         <input id='silent-speed' class="silent-speed" name='silentSpeed' type="number" min="1" max="9999" required />
         <label for="silent-speed">Silent Speed</label>
         <br />
-        <input id='sounded-speed' class="silent-speed" name='SoundedSpeed' type="number" min="1" max="9999" required />
+        <input id='sounded-speed' class="silent-speed" name='soundedSpeed' type="number" min="1" max="9999" required />
         <label for="sounded-speed">Sounded Speed</label>
         <br />
-        <input type="number" id="frame-rate" name="frameRate" min="1" max="999" required="required" />
+        <!-- eventually this value should be guessed if possible -->
+        <input id="frame-rate" type="number"  name="frameRate" min="1" max="999" required="required" />
+        <label for="frame-rate">Frame Rate</label>
     </div>
     <button type="submit">upload video</button>
     </form>
