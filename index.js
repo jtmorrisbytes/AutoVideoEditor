@@ -18,10 +18,10 @@ app.use(require('express-session')({
     saveUninitialized:false
 }))
 app.use(express.static(path.join(__dirname,"client")))
-app.get("/api/video",(req,res)=>{
+app.get("/video",(req,res)=>{
     res.redirect("/")
 })
-app.post("/api/video",(req,res)=>{
+app.post("/video",(req,res)=>{
     
     new formidible.IncomingForm({maxFileSize:2000*1024*1024}).parse(req, function (err, fields, files) {
         if(err) {
@@ -50,7 +50,6 @@ app.post("/api/video",(req,res)=>{
 
 
 
-
 app.listen(
-    3000, "localhost",()=>{console.log("server started")}
+    8080, "localhost",()=>{console.log("server started")}
 )

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "startClient": "cd ./client && npm run start",
+    "startServer": "nodemon",
+    "start": "concurrently \"npm run startClient\" \"npm run startServer\""
   },
   "private": true,
   "keywords": [],
@@ -15,5 +17,8 @@
     "express-session": "^1.17.0",
     "express.js": "^1.0.0",
     "formidable": "^1.2.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0"
   }
 }
