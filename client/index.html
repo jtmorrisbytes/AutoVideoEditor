@@ -18,8 +18,11 @@
         <label for="sounded-speed">Sounded Speed</label>
         <br />
         <!-- eventually this value should be guessed if possible -->
-        <input id="frame-rate" type="number"  name="frameRate" min="1" max="999" required="required" />
+        <input id="frame-rate" type="number"  name="frameRate" min="1" max="999" required />
         <label for="frame-rate">Frame Rate</label>
+        <br />
+        <input id='frame-margin' type="number" name="frameMargin" min="0" max="9999"  value="0" required />
+        <label for='frame-margin'>Frame Margin</label>
     </div>
     <button type="submit">upload video</button>
     </form>
